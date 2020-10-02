@@ -1,0 +1,13 @@
+{% extends 'page_theme.html' %}
+{% block title %}Wolverine{% endblock %}
+{% block body %}
+{% load static %}
+
+    <h2>Wolverine</h2>
+    <p>
+    This page shows Wolverine, one of my favorite heroes.
+    </p>
+
+    <img src="{% static 'img/wolverine.jpg' %}" alt="wolverine" width='600' height = 500'>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'page_theme.html' %}
+{% block title %}Deadpool{% endblock %}
+{% block body %}
+{% load static %}
+
+    <h2>Deadpool</h2>
+    <p>
+    This page shows Deadpool, one of my favorite heroes.
+    </p>
+
+    <img src="{% static 'img/deadpool.jpg' %}" alt="deadpool" width='600' height = 500'>
+
+{% endblock %}
