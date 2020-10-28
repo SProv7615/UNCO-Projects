@@ -22,6 +22,6 @@ class HeroDisplay(TemplateView):
 
 urlpatterns = [
     path('', HeroView.as_view(template_name="hero.html")),
-    path('display', HeroDisplay.as_view(template_name="hero_display.html")),
+    path('display/', HeroDisplay.as_view(template_name="hero_display.html")),
     path('admin/', admin.site.urls),
 ]
