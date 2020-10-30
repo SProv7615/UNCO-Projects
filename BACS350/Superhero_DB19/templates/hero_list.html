@@ -1,0 +1,25 @@
+{% extends 'page_theme.html' %}
+
+{% block main %}
+
+    <a href="/">Hero List</a>
+    <h1>Heroes Gallery</h1>
+
+    {% for hero in object_list %}
+
+        <h2> Hero - 
+            <a href="{{ hero.pk }}">{{ hero.name }}</a>
+        </h2>
+        <p>
+            <a href="edit/{{ hero.pk }}/" >Edit {{ hero.name }}</a>  |
+            <a href="delete/{{ hero.pk }}/">Delete {{hero.name }}</a>
+        </p>
+        <p>
+            This page shows {{ hero.name }}, also known as {{ hero.identity }}.
+        </p>
+
+        <img width="500" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+    
+    {% endfor %}
+
+{% endblock main %}
