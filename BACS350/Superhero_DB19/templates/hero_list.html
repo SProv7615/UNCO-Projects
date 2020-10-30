@@ -4,6 +4,7 @@
 
     <a href="/">Hero List</a>
     <h1>Heroes Gallery</h1>
+    <p> Notice a hero missing that you'd like to see? <a href="add">Add that hero here.</a></p>
 
     {% for hero in object_list %}
 
@@ -12,13 +13,13 @@
         </h2>
         <p>
             <a href="edit/{{ hero.pk }}/" >Edit {{ hero.name }}</a>  |
-            <a href="delete/{{ hero.pk }}/">Delete {{hero.name }}</a>
+            <a href="delete/{{ hero.pk }}/">Delete {{ hero.name }}</a>
         </p>
         <p>
             This page shows {{ hero.name }}, also known as {{ hero.identity }}.
         </p>
 
-        <img width="500" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+        <img width="500" src="/static/images/{{ hero.image }}.jpg" alt="{{ hero.identity }}">
     
     {% endfor %}
 
