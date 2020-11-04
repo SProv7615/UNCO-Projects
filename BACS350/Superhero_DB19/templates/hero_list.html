@@ -2,25 +2,36 @@
 
 {% block main %}
 
+    <main class="bg-dark text-light">
+        <div class="container text-center">
     
-    <h1>Heroes Gallery</h1>
-    <p> Notice a hero missing that you'd like to see? <a href="add" class="btn btn-primary">Add that hero here.</a></p>
+            <h1>Heroes Gallery</h1>
+            <p> Notice a hero missing that you'd like to see? <a href="add" class="btn btn-primary">Add that hero here.</a></p>
 
-    {% for hero in object_list %}
+            {% for hero in object_list %}
+            
+                    <div class="card m-3">
+                        <div class="card-header">
+                            <h2> Hero - 
+                                <a href="{{ hero.pk }}">{{ hero.name }}</a>
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <a href="edit/{{ hero.pk }}" class="btn btn-primary">Edit</a>
+                                <a href="delete/{{ hero.pk }}/" class="btn btn-primary">Delete {{ hero.name }}</a>           
+                            </p>
+                            <p>
+                                This page shows {{ hero.name }}, also known as {{ hero.identity }}.
+                            </p>
 
-        <h2> Hero - 
-            <a href="{{ hero.pk }}">{{ hero.name }}</a>
-        </h2>
-        <p>
-            <a href="edit/{{ hero.pk }}" class="btn btn-primary">Edit</a>
-            <a href="delete/{{ hero.pk }}/" class="btn btn-primary">Delete {{ hero.name }}</a>           
-        </p>
-        <p>
-            This page shows {{ hero.name }}, also known as {{ hero.identity }}.
-        </p>
+                            <img width="500" src="/static/images/{{ hero.image }}.jpg" alt="{{ hero.identity }}">
+                        </div>
+            
+                    </div>
 
-        <img width="500" src="/static/images/{{ hero.image }}.jpg" alt="{{ hero.identity }}">
-    
-    {% endfor %}
+            {% endfor %}
+            </div>
+    </main>
 
 {% endblock main %}

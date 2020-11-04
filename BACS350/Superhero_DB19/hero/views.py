@@ -28,6 +28,13 @@ class HeroEditView(UpdateView):
     model = Superhero
     fields = '__all__'
 
+#    Code to get 'if something were edit view vs add view', this can detect.
+#    def get_context_data(self, **kwargs):      
+#        kwargs = super(heroEditView,
+#                      self).get_context_data(**kwargs)
+#        kwargs['edit'] = True
+#        return Kwargs
+    
 class HeroDeleteView(DeleteView):
     template_name = "hero_delete.html"
     model = Superhero

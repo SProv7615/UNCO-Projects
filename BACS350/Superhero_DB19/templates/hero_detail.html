@@ -2,10 +2,33 @@
 
 {% block main %}
 
-    <div class="container">
+<!--    <div class="container">-->
         
         <a href="/" class="btn btn-primary">Hero List</a>
         <a href="edit/{{ object.pk }}" class="btn btn-primary">Edit</a>
+                <div class="container text-center">
+                    <div class="card m-3">
+                        <div class="card-header">
+                            <h2> Hero - 
+                                <a href="{{ object.name }}">{{ object.name }}</a>
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <a href="edit/{{ object.pk }}" class="btn btn-primary">Edit</a>
+                                <a href="delete/{{ object.pk }}/" class="btn btn-primary">Delete {{ hero.name }}</a>           
+                            </p>
+                            <p>
+                                This page shows {{ object.name }}, also known as {{ object.identity }}.
+                            </p>
+
+                            <img width="500" src="/static/images/{{ object.image }}.jpg" alt="{{ object.identity }}">
+                        </div>
+                    </div>
+                </div>
+
+
+<!--
         <h1>Hero Profile</h1>
        
 
@@ -15,6 +38,7 @@
             </p>
 
             <img width="500" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
-    </div>
+-->
+<!--    </div>-->
 
 {% endblock main %}
