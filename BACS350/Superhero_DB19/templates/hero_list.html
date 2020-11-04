@@ -2,9 +2,9 @@
 
 {% block main %}
 
-    <a href="/">Hero List</a>
+    
     <h1>Heroes Gallery</h1>
-    <p> Notice a hero missing that you'd like to see? <a href="add">Add that hero here.</a></p>
+    <p> Notice a hero missing that you'd like to see? <a href="add" class="btn btn-primary">Add that hero here.</a></p>
 
     {% for hero in object_list %}
 
@@ -12,8 +12,8 @@
             <a href="{{ hero.pk }}">{{ hero.name }}</a>
         </h2>
         <p>
-            <a href="edit/{{ hero.pk }}/" >Edit {{ hero.name }}</a>  |
-            <a href="delete/{{ hero.pk }}/">Delete {{ hero.name }}</a>
+            <a href="edit/{{ hero.pk }}" class="btn btn-primary">Edit</a>
+            <a href="delete/{{ hero.pk }}/" class="btn btn-primary">Delete {{ hero.name }}</a>           
         </p>
         <p>
             This page shows {{ hero.name }}, also known as {{ hero.identity }}.

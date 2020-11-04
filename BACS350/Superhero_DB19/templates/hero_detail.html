@@ -2,14 +2,19 @@
 
 {% block main %}
 
-    <a href="/">Hero List</a>
-    <h1>Hero Profile</h1>
+    <div class="container">
+        
+        <a href="/" class="btn btn-primary">Hero List</a>
+        <a href="edit/{{ object.pk }}" class="btn btn-primary">Edit</a>
+        <h1>Hero Profile</h1>
+       
 
-        <h2> Hero - {{ object.name }}</h2>
-        <p>
-            Hero Identity - {{ object.identity }}
-        </p>
+            <h2> Hero - {{ object.name }}</h2>
+            <p>
+                Hero Identity - {{ object.identity }}
+            </p>
 
-        <img width="500" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
+            <img width="500" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
+    </div>
 
 {% endblock main %}
