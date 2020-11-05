@@ -14,6 +14,13 @@ class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
     model = Superhero
     
+#    def get_context_data(self, **kwargs):      
+#        kwargs = super().get_context_data(**kwargs)
+#        image = kwargs['object'].image
+#        if not exists('static/images/' + image):
+#            kwargs['missing'] = True
+#        return kwargs
+    
 class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero

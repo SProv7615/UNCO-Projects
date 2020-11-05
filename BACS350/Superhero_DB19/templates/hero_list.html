@@ -10,13 +10,13 @@
 
             {% for hero in object_list %}
             
-                    <div class="card m-3">
+                    <div class="card m-3 text-dark">
                         <div class="card-header">
                             <h2> Hero - 
                                 <a href="{{ hero.pk }}">{{ hero.name }}</a>
                             </h2>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body text-dark">
                             <p>
                                 <a href="edit/{{ hero.pk }}" class="btn btn-primary">Edit</a>
                                 <a href="delete/{{ hero.pk }}/" class="btn btn-primary">Delete {{ hero.name }}</a>           

@@ -3,9 +3,6 @@
 {% block main %}
 
 <!--    <div class="container">-->
-        
-        <a href="/" class="btn btn-primary">Hero List</a>
-        <a href="edit/{{ object.pk }}" class="btn btn-primary">Edit</a>
                 <div class="container text-center">
                     <div class="card m-3">
                         <div class="card-header">
@@ -21,7 +18,11 @@
                             <p>
                                 This page shows {{ object.name }}, also known as {{ object.identity }}.
                             </p>
-
+                            <pre>IMAGE: /static/images/{{ object.image }}.jpg</pre>
+                            
+                            {% if missing %}
+                                <i class="fa fa-user fa-2x p-3"></i>
+                            {% endif %}
                             <img width="500" src="/static/images/{{ object.image }}.jpg" alt="{{ object.identity }}">
                         </div>
                     </div>
