@@ -18,10 +18,10 @@
                             <p>
                                 This page shows {{ object.name }}, also known as {{ object.identity }}.
                             </p>
-                            <pre>IMAGE: /static/images/{{ object.image }}.jpg</pre>
-                            
+                            <pre>IMAGE: {{ image }}</pre>
+                            <pre>{{ missing }}</pre>
                             {% if missing %}
-                                <i class="fa fa-user fa-2x p-3"></i>
+                                <p><i class="fa fa-user fa-2x p-3"></i></p>
                             {% endif %}
                             <img width="500" src="/static/images/{{ object.image }}.jpg" alt="{{ object.identity }}">
                         </div>
