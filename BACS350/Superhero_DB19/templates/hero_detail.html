@@ -7,7 +7,7 @@
                     <div class="card m-3">
                         <div class="card-header">
                             <h2> Hero - 
-                                <a href="{{ object.name }}">{{ object.name }}</a>
+                                {{ object.name }}
                             </h2>
                         </div>
                         <div class="card-body">
@@ -27,19 +27,5 @@
                         </div>
                     </div>
                 </div>
-
-
-<!--
-        <h1>Hero Profile</h1>
-       
-
-            <h2> Hero - {{ object.name }}</h2>
-            <p>
-                Hero Identity - {{ object.identity }}
-            </p>
-
-            <img width="500" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
--->
-<!--    </div>-->
 
 {% endblock main %}

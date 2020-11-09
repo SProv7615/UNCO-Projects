@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import DetailView, ListView, TemplateView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
@@ -29,15 +30,23 @@ class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero
 
-class HeroAddView(CreateView):
+class HeroAddView(LoginRequiredMixin, CreateView):
     template_name = "hero_add.html"
     model = Superhero
     fields = '__all__'
     
-class HeroEditView(UpdateView):
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.pk
+        return super().form_valid(form)
+    
+class HeroEditView(LoginRequiredMixin, UpdateView):
     template_name = "hero_edit.html"
     model = Superhero
     fields = '__all__'
+    
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.pk
+        return super().form_valid(form)
 
 #    Code to get 'if something were edit view vs add view', this can detect.
 #    def get_context_data(self, **kwargs):      
@@ -46,7 +55,11 @@ class HeroEditView(UpdateView):
 #        kwargs['edit'] = True
 #        return Kwargs
     
-class HeroDeleteView(DeleteView):
+class HeroDeleteView(LoginRequiredMixin, DeleteView):
     template_name = "hero_delete.html"
     model = Superhero
     success_url = reverse_lazy('hero_list')
+    
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.pk
+        return super().form_valid(form)
