@@ -1,0 +1,10 @@
+{% if user.is_authenticated %}
+        <span class="nav-link p-2 m-2">{{ user.username }}</span>
+        <a href="{% url 'logout' %}" class=" nav-link text-light p-2 m-2">
+            <i class="fas fa-sign-out-alt"></i> Log out
+        </a>
+{% else %}
+        <a href="{% url 'login' %}" class="nav-link text-light p-2 m-2">
+            <i class="fas fa-sign-in-alt"></i> Log In
+        </a>
+{% endif %}

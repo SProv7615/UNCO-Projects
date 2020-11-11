@@ -1,0 +1,37 @@
+{% extends 'workshop.html' %}
+
+{% block main %}
+
+    <h2>Cards Layout View</h2>
+    
+   <div class="container">
+       
+       <div class="row">
+           
+           {% for card in cards %}
+           
+           <div class="col-lg-6 my-3">
+               
+                <div class="card">
+                    
+                    <div class="card-header {{ card.color }} text-light">
+                        
+                        <h2>{{ card.title }}</h2>
+                        
+                    </div>
+                    
+                    <div class="class-body text-dark">
+                        <p>{{ card.body }}</p>
+                    </div>
+                    
+                </div>
+               
+           </div>
+           
+           {% endfor %}
+       
+       </div>
+       
+   </div>
+
+{% endblock main %}
