@@ -4,59 +4,25 @@
 {% block main %}
 
     <main class="bg-dark text-light">
-        <div class="title text-center">
+       
             <h2>{{ title }}</h2>
-        </div>
+            {% include '_card.html' %}
 
+<!--
         <div class="container">
-
-           <div class="row">
-
-               <div class="col-lg-4">
-
-                   <div class="card">
-
-                       <div class="card-header bg-primary text-light">
-                           <h2>{{ card.title }}</h2>
-                       </div>
-                       <div class="card-body bg-light text-dark">
-                           <p>{{ card.body }}</p>
-                       </div>
-
-                   </div>
-
-               </div>
-               <div class="col-lg-4">
-
-                   <div class="card">
-
-                       <div class="card-header bg-primary text-light">
-                           <h2>{{ card.title }}</h2>
-                       </div>
-                       <div class="card-body bg-light text-dark">
-                           <p>{{ card.body }}</p>
-                       </div>
-
-                   </div>
-
-               </div>
-                <div class="col-lg-4">
-
-                   <div class="card">
-
-                       <div class="card-header bg-primary text-light">
-                           <h2>{{ card.title }}</h2>
-                       </div>
-                       <div class="card-body bg-light text-dark">
-                           <p>{{ card.body }}</p>
-                       </div>
-
-                   </div>
-
+           <div class="card">
+               <div class="card-header bg-success text-light">
+                    <div class="card-header {{ card.color }} text-light">
+                        <h2>{{ card.title }}</h2>
+                    </div>
+                    <div class="card-body bg-light text-dark">
+                        <p>{{ card.body }}</p>
+                    </div>
                </div>
            </div>
 
         </div>
+-->
     </main>
 
 {% endblock main %}
