@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 from markdown import markdown
 
-from .workshop import card_data, cards_data, markdown_file_data
+from .workshop import card_data, cards_data, markdown_file_data, table_data, tabs_data, accordion_data
 
 
 class HomeView(TemplateView):
@@ -19,18 +19,29 @@ class CardsView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return dict(cards=cards_data())
-
-class MarkdownView(TemplateView):
-    template_name='markdown.html'
-    
-    def get_context_data(self, **kwargs):
-        md_doc = "README.md"
-        return dict(markdown=markdown_data(md_doc))
     
 class DocumentView(TemplateView):
     template_name = 'markdown.html'
     
     def get_context_data(self, **kwargs):
-        doc = "README.md"
-        card = dict(title='Doc View', body=markdown(open(doc).read()), color='bg-danger', width='col-lg-12')
-        return dict(card=card)
+        doc = kwargs.get('doc', "README.md")
+        return markdown_file_data(doc)
+
+class TableView(TemplateView):
+    template_name = 'table.html'
+    
+    def get_context_data(self, **kwargs):
+        return dict(table=table_data('Documents/lesson.csv'))
+    
+class TabsView(TemplateView):
+    template_name = 'tabs.html'
+    
+    def get_context_data(self, **kwargs):
+        tabs = tabs_data()
+        return dict(title='Tab View', tabs=tabs)
+
+class AccordionView(TemplateView):
+    template_name = 'accordion.html'
+    
+    def get_context_data(self, **kwargs):
+        return dict(accordion=accordion_data())
