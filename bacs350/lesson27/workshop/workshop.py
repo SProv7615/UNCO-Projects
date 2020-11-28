@@ -34,6 +34,11 @@ def cards_data():
                 card_data("Card Four",  lorem(500), "bg-danger", 'col-lg-6'),
             ]
 
+def carousel_data():
+    return [["https://source.unsplash.com/random/1200x800?bear", "active"], 
+            ["https://source.unsplash.com/random/1200x800?forest"],       
+            ["https://source.unsplash.com/random/1200x800?ocean"],
+            ["https://source.unsplash.com/random/1200x800?flower"]]
 
 def markdown_file_data(doc):
     doc = 'Documents/' + doc

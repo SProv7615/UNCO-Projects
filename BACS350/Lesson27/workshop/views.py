@@ -1,13 +1,18 @@
 from django.views.generic import TemplateView
 from markdown import markdown
 
-from .workshop import card_data, cards_data, markdown_file_data, table_data, tabs_data, accordion_data
+from .workshop import accordion_data, card_data, cards_data, carousel_data, markdown_file_data, table_data, tabs_data 
 
 
 class HomeView(TemplateView):
     template_name = 'workshop.html'
 
-
+class AccordionView(TemplateView):
+    template_name = 'accordion.html'
+    
+    def get_context_data(self, **kwargs):
+        return dict(accordion=accordion_data())
+        
 class CardView(TemplateView):
     template_name = 'card.html'
     
@@ -19,6 +24,13 @@ class CardsView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return dict(cards=cards_data())
+    
+class CarouselView(TemplateView):
+    template_name = 'carousel.html'
+    
+    def get_context_data(self, **kwargs):
+        carousel = carousel_data()
+        return dict(title='Carousel View', carousel=carousel)    
     
 class DocumentView(TemplateView):
     template_name = 'markdown.html'
@@ -40,8 +52,3 @@ class TabsView(TemplateView):
         tabs = tabs_data()
         return dict(title='Tab View', tabs=tabs)
 
-class AccordionView(TemplateView):
-    template_name = 'accordion.html'
-    
-    def get_context_data(self, **kwargs):
-        return dict(accordion=accordion_data())
