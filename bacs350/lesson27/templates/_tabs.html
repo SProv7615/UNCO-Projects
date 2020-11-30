@@ -1,43 +1,46 @@
-<div class="m-3">
-    <div class="container">
+{% if tabs %}
 
-        <ul class="nav nav-tabs" id="myTab2" role="tablist">
-            {% for t in tabs %}
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link {{ t.active }}" 
-                       id="{{ t.name }}-tab" 
-                       data-toggle="tab" 
-                       href="#{{ t.name }}" 
-                       role="tab" 
-                       aria-controls="{{ t.name }}" 
-                       aria-selected="{{ t.selected }}" 
-                       href="#{{ t.name }}">
-                        {{ t.header }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="m-3">
+        <div class="container">
 
-        <div class="tab-content" id="myTab2Content">
+            <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                {% for t in tabs %}
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link {{ t.active }}" 
+                           id="{{ t.name }}-tab" 
+                           data-toggle="tab" 
+                           href="#{{ t.name }}" 
+                           role="tab" 
+                           aria-controls="{{ t.name }}" 
+                           aria-selected="{{ t.selected }}" 
+                           href="#{{ t.name }}">
+                            {{ t.header }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
 
-            {% for t in tabs %}
+            <div class="tab-content" id="myTab2Content">
 
-                <div class="tab-pane bg-light text-dark p-5 {{ t.active }} {{ t.show }} fade" 
-                    id="{{ t.name }}" 
-                    role="tabpanel" 
-                    aria-labelledby="{{ t.name }}-tab">
+                {% for t in tabs %}
 
-                    <h2>{{ t.header }}</h2>
+                    <div class="tab-pane bg-light text-dark p-5 {{ t.active }} {{ t.show }} fade" 
+                        id="{{ t.name }}" 
+                        role="tabpanel" 
+                        aria-labelledby="{{ t.name }}-tab">
 
-                    {% autoescape off %}
-                        {{ t.body }}
-                    {% endautoescape %}
+                        <h2>{{ t.header }}</h2>
 
-                </div>
+                        {% autoescape off %}
+                            {{ t.body }}
+                        {% endautoescape %}
 
-            {% endfor %}
+                    </div>
+
+                {% endfor %}
+
+            </div>
 
         </div>
-
     </div>
-</div>
+{% endif %}

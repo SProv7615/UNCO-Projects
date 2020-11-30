@@ -1,31 +1,30 @@
-<pre class="text-white">
-</pre>
+{% if carousel %}
+    <!--Slider With Controls -->
+    <div id="slider2" class="carousel slide mb-5" data-ride="carousel">
 
-<!--Slider With Controls -->
-<div id="slider2" class="carousel slide mb-5" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for image in carousel %}
+                <div class="carousel-item {{ image.1 }}">
+                    <img class="d-block img-fluid" src="{{ image.0 }}" alt="Random Pic">
+                </div>
+            {% endfor %}
+        </div>
 
-    <div class="carousel-inner">
-        {% for image in carousel %}
-            <div class="carousel-item {{ image.1 }}">
-                <img class="d-block img-fluid" src="{{ image.0 }}" alt="Random Pic">
-            </div>
-        {% endfor %}
+        <!-- CONTROLS -->
+        <a href="#slider2" class="carousel-control-prev" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a href="#slider2" class="carousel-control-next" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
-    
-    <!-- CONTROLS -->
-    <a href="#slider2" class="carousel-control-prev" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a href="#slider2" class="carousel-control-next" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-</div>
 
-<script>
-    $('.carousel').carousel({
-        interval: 2000,
-        keyboard: true,
-        pause: 'hover',
-        wrap: true
-    })
-</script>
+    <script>
+        $('.carousel').carousel({
+            interval: 2000,
+            keyboard: true,
+            pause: 'hover',
+            wrap: true
+        })
+    </script>
+{% endif %}

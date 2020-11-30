@@ -47,8 +47,7 @@ def markdown_file_data(doc):
     else:
         text = markdown(open(doc).read())
     title = f'Document - {doc}'
-    card = card_data(title, text, 'bg-success', 'col-lg-12') 
-    return dict(card=card)
+    return card_data(title, text, 'bg-success', 'col-lg-12') 
 
 
 def table_data():
@@ -74,3 +73,9 @@ def tabs_data():
         return [options(i, tab, i == 2) for i, tab in enumerate(tabs)]
     
     return set_options(cards_data())
+
+def super_data():
+    return dict(card=markdown_file_data("README.md"),
+               table=table_data('Documents/lessons.csv'),
+               carousel=carousel_data(),
+               tabs=tabs_data())
