@@ -25,7 +25,7 @@ SECRET_KEY = 'nav3$+54%%-cxlv_%zihx+0%tdg9sgvasmh(7^rzn0b@^yu4yv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'http://prov7615.pythonanywhere.com/']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'hero',
     'accounts',
+    'heronews',
 ]
 
 MIDDLEWARE = [

@@ -4,7 +4,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
 from os.path import exists
 from .models import Superhero
-
+from .herofunctionality import card_data, markdown_file_data
 
 #class HeroView(TemplateView):
 #    template_name = "hero_detail.html"
@@ -29,6 +29,7 @@ class HeroDetailView(DetailView):
 class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero
+
 
 class HeroAddView(LoginRequiredMixin, CreateView):
     template_name = "hero_add.html"
@@ -63,3 +64,10 @@ class HeroDeleteView(LoginRequiredMixin, DeleteView):
     def form_valid(self, form):
         form.instance.author_id = self.request.user.pk
         return super().form_valid(form)
+    
+class HeroDocumentView(TemplateView):
+    template_name = 'markdown.html'
+    
+    def get_context_data(self, **kwargs):
+        doc = kwargs.get('doc', "about.md")
+        return dict(card=markdown_file_data(doc))

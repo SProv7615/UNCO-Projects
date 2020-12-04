@@ -1,0 +1,40 @@
+{% extends 'page_theme.html' %}
+
+{% block main %}
+
+    <h1 class="title-page text-center text-white">Gallery of (Mis)Deeds</h1>
+    <div class="paper bg-dark text-white text-center">
+    <p> Got a story that needs telling? <a href="news/add" class="btn btn-primary">Tell that story here!</a></p>
+    <div class="container text-center">
+    {% for post in object_list %}
+        <div class="card bg-danger col-lg-12 my-3 p-2">        
+            <div class="card img src='static/images/newspaper.jpg'">             
+                <div class="card-header bg-primary text-light">                   
+                    <h2>
+                        <a href="news/edit/{{ post.pk }}" class="btn btn-success">Edit Article</a> 
+                        {{ post.title }} 
+                        <a href="news/delete/{{ post.pk }}" class="btn btn-danger">Delete Article</a>
+                    </h2> 
+                    <h4>{{ post.author }} </h4>                  
+                </div>                
+                <div class="class-body text-dark">
+                    {% autoescape off %}
+                         {{ post.article }}
+                    {% endautoescape %}
+                </div>                   
+            </div>             
+        </div>   
+    {% endfor %}
+    </div>
+    </div>
+{% endblock main %}
+
+
+{% block attribution %}
+     <a href="https://www.vecteezy.com/free-vector/old-newspaper-background">Old Newspaper Background Vectors by Vecteezy</a>
+{% endblock attribution %}
+
+
+<!--
+<a href="edit/{{ hero.pk }}" class="btn btn-primary">Edit</a>
+                                <a href="delete/{{ hero.pk }}/" class="btn btn-primary">Delete {{ hero.name }}</a>  -->

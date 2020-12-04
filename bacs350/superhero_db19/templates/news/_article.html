@@ -1,0 +1,31 @@
+<div class="card width-col-lg-6 my-3">        
+    <div class="card bg-'static/images/newspaper.png'">             
+        <div class="card-header bg-dark text-light">                   
+            <h2>{{ object.title }}</h2>                  
+        </div>                
+        <div class="class-body text-dark">
+            {% autoescape off %}
+                 {{ object.body }}
+            {% endautoescape %}
+        </div>                   
+    </div>             
+</div>         
+
+
+
+
+<div class="accordion" id="heroMisc">
+  <div class="card">
+    <div class="card-header" id="Description">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseDescription" aria-expanded="true" aria-controls="collapseDescription">
+          {{ object.name }}'s Bio:
+        </button>
+      </h2>
+    </div>
+    <div id="collapseDescription" class="collapse show" aria-labelledby="Description" data-parent="#heroMisc">
+      <div class="card-body">
+        {{ object.description }}
+      </div>
+    </div>
+  </div>
