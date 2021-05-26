@@ -1,0 +1,32 @@
++------------------------------------------+
+
+|Final Test                                |
+
+|By: Final                                 |
+
+|Date: 3/29/2019 The Final Year            |
+
++------------------------------------------+
+
+|Input File:                               |
+
+|Output File:          DefaultDepository.txt|
+
+|N:                                      10|
+
+|Sum:                                   565|
+
+|Average:                            56.500|
+
+|Variance:                          743.611|
+
+|Standard Deviation:                 27.269|
+
+|Minimum:                            23.000|
+
+|Maximum:                            97.000|
+
+|Median:                             55.500|
+
++------------------------------------------+
+

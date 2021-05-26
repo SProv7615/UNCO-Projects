@@ -1,0 +1,37 @@
+/*******************************************************************************
+*                           Assignment 3                                       *
+*                                                                              *
+* PROGRAMMER:       Stephen Provost                                            *
+* CLASS:            CS102                                                      *
+* ASSIGNMENT:       Assignment assig-3                                         *
+* INSTRUCTOR:       Dean Zeller                                                *
+* SUBMISSION DATE:  2/15/2019                                                  *
+*                                                                              *
+* DESCRIPTION:                                                                 *
+* Dice. So many die and dice. More than you can shake a cup with.              *
+*                                                                              *
+* COPYRIGHT:                                                                   *
+* This program is (c) 2019 Stephen Provost and Dean Zeller. This is original   *
+* work, without use of outside sources.                                        *
+*******************************************************************************/
+
+import java.util.*;
+
+public class Die
+{
+  //Creating initial variables
+  private int currentSides, currentValue;
+  
+  
+  public void DieObject(int currentSides_,int currentValue_)
+  {
+    this.currentSides = currentSides_;
+    this.currentValue = currentValue_;
+  }
+  
+  public void Choices()
+  {
+    
+    }
+  }
+}

@@ -1,0 +1,32 @@
++------------------------------------------+
+
+|testing                                   |
+
+|By: Testing                               |
+
+|Date: Testing                             |
+
++------------------------------------------+
+
+|Input File:               AERepository.txt|
+
+|Output File:              AEDepository.txt|
+
+|N:                                       6|
+
+|Sum:                                    77|
+
+|Average:                            12.877|
+
+|Variance:                           34.561|
+
+|Standard Deviation:                  5.879|
+
+|Minimum:                             4.520|
+
+|Maximum:                            19.840|
+
+|Median:                             13.410|
+
++------------------------------------------+
+
