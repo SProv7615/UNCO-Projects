@@ -1,0 +1,19 @@
+    <header class="bg-dark p-2 text-light">
+        <div class="row media">          
+            <div class="media-body">     
+                <h2 class="display-4 ml-4">
+                    <a href="/" class="text-light">Developing A Better Tomorrow</a>
+                </h2>
+                <h3 class="display-15 ml-4">A "Wolf Reach Studios" Production</h3>
+            {% include '_menu.html' %}
+            </div>
+            <div class="text-right">
+            {% block user %}
+                    {% include '_user.html' %}
+            {% endblock user %}
+            </div>
+            <div class="text-right">
+                <img width="200" src="/static/images/wolfreachstudios.jpg" alt="logo">
+            </div>
+        </div>
+    </header>
