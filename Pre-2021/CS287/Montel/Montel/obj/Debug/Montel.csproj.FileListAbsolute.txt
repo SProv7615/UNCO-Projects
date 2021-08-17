@@ -1,0 +1,7 @@
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\bin\Debug\Montel.exe.config
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\bin\Debug\Montel.exe
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\bin\Debug\Montel.pdb
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\obj\Debug\Montel.csprojAssemblyReference.cache
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\obj\Debug\Montel.csproj.CoreCompileInputs.cache
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\obj\Debug\Montel.exe
+C:\Users\prov7615\Documents\CS387\OOPE10\Montel\Montel\obj\Debug\Montel.pdb

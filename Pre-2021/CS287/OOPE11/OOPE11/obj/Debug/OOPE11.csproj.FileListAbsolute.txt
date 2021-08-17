@@ -1,0 +1,7 @@
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\bin\Debug\OOPE11.exe.config
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\bin\Debug\OOPE11.exe
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\bin\Debug\OOPE11.pdb
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\obj\Debug\OOPE11.csprojAssemblyReference.cache
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\obj\Debug\OOPE11.csproj.CoreCompileInputs.cache
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\obj\Debug\OOPE11.exe
+C:\Users\Styx\Downloads\FinalProject11\OOPE11\OOPE11\OOPE11\obj\Debug\OOPE11.pdb
